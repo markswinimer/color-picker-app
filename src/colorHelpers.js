@@ -19,7 +19,7 @@ function generatePalette(staterPalette) {
         id: color.name.toLowerCase().replace(/ /g, "-"),
         hex: scale[i],
         rgb: chroma(scale[i]).css(),
-        rgba: chroma(scale[i]).css().replace("rgba", "rgba").replace(")", ",1.0)")
+        rgba: chroma(scale[i]).css().replace("rgbr", "rgba").replace(")", ",1.0)")
       })
     }
   }
