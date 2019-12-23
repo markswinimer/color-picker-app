@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import PalleteArray from './PalleteArray';
-import './PalleteList.css';
+import MiniPalette from './MiniPalette';
+import './PaletteList.css';
 
 class PaletteList extends Component {
   render() {
     const { palettes } = this.props;
     return(
-      <div className="PalleteList">
-        <div className="PalleteList-sidebar">
+      <div className="PaletteList">
+        <div className="PaletteList-sidebar">
           <h1>React Colors</h1>
           {palettes.map(palette => (
             <p>
@@ -16,8 +16,11 @@ class PaletteList extends Component {
             </p>
           ))}
         </div>
-
-        <PalleteArray/>
+        <div className="PaletteList-Array">
+          {palettes.map(palette => (
+              <MiniPalette palette={palette}/>
+          ))}
+        </div>
       </div>
     )
   }
