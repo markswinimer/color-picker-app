@@ -10,6 +10,7 @@ class Palette extends Component {
     this.changeLevel = this.changeLevel.bind(this);
     this.changeFormat = this.changeFormat.bind(this);
   }
+
   changeLevel(level) {
     this.setState({ level });
   }
@@ -24,6 +25,7 @@ class Palette extends Component {
         background={color[format]}
         name={color.name}
         key={color.id}
+        level={color.level}
       />
     ))
 
